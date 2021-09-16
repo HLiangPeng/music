@@ -9,12 +9,14 @@ const extendClick = () => {
     };
   `
 }
-//一行文字溢出部分用...代替
-const noWrap = () => {
+
+
+const noWrap = (row = 1) => {
   return `
-    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: ${row};
     overflow: hidden;
-    white-space: nowrap;
   `
 }
 
